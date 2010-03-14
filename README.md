@@ -11,6 +11,6 @@ It's a rails-inspired framework for node.js. That means it's opinionated, and it
 It uses a meta-self-documenting system. Pass any object into the doc() function to read its documentation.
 
 Authors
--------g
+-------
 Sean Grove <sean at chuwe>
 Kevin Zettler

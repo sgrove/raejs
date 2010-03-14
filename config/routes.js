@@ -1,5 +1,4 @@
-router = require('../lib/router')
-router = router.router // Figure out how to export properly...
+router = require('../lib/router').router
 
 router.resource("post");
 router.root({controller: "home", action: "welcome"});

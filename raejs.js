@@ -38,7 +38,7 @@ var routeRequest = function(request, response) {
 
     // TODO: Probably don't need eval here
     logger.debug("controllers." + route.controller + "." + route.action + "(request, response)");
-    eval("controllers." + route.controller + "." + route.action + "(request, response)");
+    eval("controllers." + route.controller + "._" + route.action + "(request, response)");
 };
 
 logger.info('Server running at http://localhost:8000/');

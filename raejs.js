@@ -1,9 +1,9 @@
 process.mixin(GLOBAL, 
-              require('../lib/jzen_fn'),
-              require('../lib/string_ext'),
-              require('../lib/array_ext'),
-              require('../lib/number_ext'),
-              require('../lib/misc_utils'));
+              require('./lib/fcg/jzen_fn'),
+              require('./lib/fcg/string_ext'),
+              require('./lib/fcg/array_ext'),
+              require('./lib/fcg/number_ext'),
+              require('./lib/fcg/misc_utils'));
 
 var sys = require('sys');
 var http = require('http');

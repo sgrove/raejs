@@ -2,14 +2,17 @@ process.mixin(GLOBAL,
               require('./lib/fcg/jzen_fn'),
               require('./lib/fcg/string_ext'),
               require('./lib/fcg/array_ext'),
-              require('./lib/fcg/number_ext'),
-              require('./lib/fcg/misc_utils'));
+              require('./lib/fcg/number_ext'));
+
+process.mixin(GLOBAL, require('./lib/fcg/jzen_model'));
 
 var sys = require('sys');
 var http = require('http');
 var router = require('./config/routes').router;
 var logger = require('./lib/logger').logger;
+var models = require('./lib/models').models;
 var controllers = require('./lib/controllers').controllers;
+
 
 http.createServer(function(request, response) {
     setTimeout(function(){

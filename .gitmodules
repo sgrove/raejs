@@ -1,0 +1,3 @@
+[submodule "lib/couchdb"]
+	path = lib/couchdb
+	url = git://github.com/felixge/node-couchdb.git

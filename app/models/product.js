@@ -9,6 +9,7 @@ var Product = jZenModel({
         name: String,
         price: Number,
         expires_at: Date,
+        type: "Product"
     },
 
     validations: [
@@ -17,7 +18,20 @@ var Product = jZenModel({
     ],
     
     body: function() {
+
+        function Product(doc) {
+            for (prop in this.fields) {
+                this[prop] = doc[prop];
+            }
+        };
+        
         return {
+            find: function(id) {
+                doc = db.getDoc(id, function(err, doc) {
+                    if (err) throw err;
+                });
+                return new Product(id);
+            },
             has_expired: function() {
                 return this.expires_at < new Date();
             }}}});
